@@ -1,0 +1,143 @@
+/* Body & HTML styling */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+
+  /* Dynamic gradient background */
+  background: linear-gradient(135deg, #f6d365, #fda085, #a1c4fd, #84fab0, #8fd3f4);
+  background-size: 1000% 1000%;
+  animation: gradientBG 20s ease infinite;
+}
+
+/* Gradient animation keyframes */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  25% { background-position: 50% 100%; }
+  50% { background-position: 100% 50%; }
+  75% { background-position: 50% 0%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Sidebar */
+aside.p-3 {
+  width: 260px; /* fixed width */
+  min-width: 260px;
+  background-color: rgba(244, 244, 244, 0.95);
+  border-right: 1px solid #ccc;
+  min-height: 100vh;
+  position: sticky;
+  top: 0;
+  overflow-y: auto;
+  backdrop-filter: blur(6px);
+  white-space: nowrap;
+  padding: 1rem;
+}
+
+/* Sidebar heading */
+aside.p-3 h5 {
+  color: #1d4ed8;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* Sidebar categories */
+.list-group-item {
+  padding: 10px 15px;
+  margin-bottom: 6px;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  background-color: #f0f0f0;
+  transition: all 0.3s ease;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.list-group-item:hover {
+  background-color: #dbeafe;
+  color: #1d4ed8;
+}
+
+.list-group-item.active {
+  background: linear-gradient(135deg, #4f46e5, #3b82f6, #06b6d4, #10b981, #f59e0b);
+  color: white;
+  font-weight: 600;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Main content */
+main.flex-grow-1 {
+  padding: 2rem;
+  min-width: 300px;
+}
+
+/* Headings */
+main.flex-grow-1 h2 {
+  color: #1d4ed8;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.1);
+}
+
+/* Masonry and cards */
+.my-masonry-grid {
+  display: flex;
+  margin-left: -30px;
+  width: auto;
+}
+
+.my-masonry-grid_column {
+  padding-left: 30px;
+  background-clip: padding-box;
+}
+
+.my-masonry-grid_column > div {
+  margin-bottom: 30px;
+}
+
+.hover-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 8px;
+}
+
+.hover-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(6px);
+}
+
+/* Buttons inside cards */
+.btn-show-toggle {
+  font-size: 0.9rem;
+  padding: 5px 12px;
+  border: 1px solid #1d4ed8;
+  border-radius: 5px;
+  color: #1d4ed8;
+  background-color: transparent;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn-show-toggle:hover {
+  background-color: #1d4ed8;
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .d-flex {
+    flex-direction: column;
+  }
+
+  aside.p-3 {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #ccc;
+    min-height: auto;
+  }
+}

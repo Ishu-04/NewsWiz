@@ -1,0 +1,97 @@
+/* Import Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Full-page dynamic gradient background */
+.liked-news-page {
+  min-height: 100vh;
+  padding: 2rem;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(120deg, #f6d365, #fda085, #84fab0, #8fd3f4, #fccb90, #a18cd1);
+  background-size: 1500% 1500%;
+  animation: gradientBG 30s ease infinite;
+}
+
+/* Gradient animation keyframes */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  25% { background-position: 50% 100%; }
+  50% { background-position: 100% 50%; }
+  75% { background-position: 50% 0%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Back to Home button */
+.btn-back-home {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  color: white;
+  background: #1d4ed8;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn-back-home:hover {
+  background: #2563eb;
+}
+
+/* Page heading */
+h3 {
+  text-align: center;
+  color: #1d4ed8;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.1);
+}
+
+/* No articles message */
+p {
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #111827;
+}
+
+/* Notes grid */
+.notes-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+/* Each card wrapper */
+.note-card-wrapper {
+  flex: 0 0 45%;
+  max-width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+/* ArticleCard styling override */
+.ArticleCard {
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(6px);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ArticleCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.18);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .note-card-wrapper {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}

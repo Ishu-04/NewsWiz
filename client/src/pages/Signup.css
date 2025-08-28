@@ -1,0 +1,74 @@
+/* Signup.css */
+
+/* Full screen animated gradient overlay */
+.signup-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  /* Dynamic gradient background */
+  background: linear-gradient(135deg, #f6d365, #fda085, #a1c4fd, #84fab0, #8fd3f4);
+  background-size: 1000% 1000%;
+  animation: gradientBG 20s ease infinite;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Gradient animation keyframes */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  25% { background-position: 50% 100%; }
+  50% { background-position: 100% 50%; }
+  75% { background-position: 50% 0%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Centered signup box */
+.signup-popup-box {
+  background-color: rgba(255, 255, 255, 0.95); /* Slightly transparent to show gradient */
+  padding: 30px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(6px);
+}
+
+/* Heading style */
+.signup-popup-box h4 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Input fields */
+.signup-popup-box .form-control {
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 14px;
+}
+
+/* Input group button */
+.signup-popup-box .input-group .btn {
+  border-radius: 0 8px 8px 0;
+}
+
+/* Submit button */
+.signup-popup-box .btn-success {
+  border-radius: 8px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+/* Footer links */
+.signup-popup-box .text-center a {
+  text-decoration: none;
+}
+
+.signup-popup-box .text-center a:hover {
+  text-decoration: underline;
+}
