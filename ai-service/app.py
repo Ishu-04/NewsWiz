@@ -53,6 +53,7 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 from summarizer import summarize_article
 from deep_translator import GoogleTranslator
+import os
 
 app = Flask(__name__)
 CORS(app)
@@ -74,5 +75,11 @@ def translate_text():
     except Exception as e:
         return jsonify({ 'error': str(e) }), 500
 
+# if __name__ == '__main__':
+#     app.run(port=5001)
+
+
+
 if __name__ == '__main__':
-    app.run(port=5001)
+    port = int(os.environ.get("PORT", 5000))  # Render injects PORT
+    app.run(host="0.0.0.0", port=port)
