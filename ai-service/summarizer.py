@@ -1,6 +1,7 @@
 from transformers import pipeline
 
-summarizer = pipeline("summarization")
+# Use a smaller summarization model (lighter, fits in Render free tier)
+summarizer = pipeline("summarization", model="sshleifer/distilbart-cnn-6-6")
 
 def summarize_article(text):
     if not text:
