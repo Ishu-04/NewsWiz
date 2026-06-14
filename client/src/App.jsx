@@ -24,7 +24,7 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import SavedNotes from './pages/SavedNotes';
-import HindiHome from './pages/Hindihome';
+import HindiHome from './pages/HindiHome';
 import LikedNews from './pages/LikedNews';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
