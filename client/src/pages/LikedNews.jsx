@@ -12,7 +12,7 @@ const LikedNews = () => {
     const token = localStorage.getItem("authToken");
 
     if (token) {
-      axios.get("http://https://newswiz-backend.onrender.com/liked-articles", {
+      axios.get("https://newswiz-backend.onrender.com/liked-articles", {
         headers: { Authorization: token }
       })
       .then((res) => {

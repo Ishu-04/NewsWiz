@@ -36,9 +36,9 @@
 
 
 //     try {
-//       let url = `http://https://newswiz-backend.onrender.com/api/news?cat=${cat}`;
+//       let url = `https://newswiz-backend.onrender.com/api/news?cat=${cat}`;
 //       if (categoryKeywords[cat]) {
-//         url = `http://https://newswiz-backend.onrender.com/api/news?keywords=${encodeURIComponent(categoryKeywords[cat])}`;
+//         url = `https://newswiz-backend.onrender.com/api/news?keywords=${encodeURIComponent(categoryKeywords[cat])}`;
 //       }
 //       const res = await axios.get(url);
 //       setArticles(res.data.articles);
@@ -102,7 +102,7 @@
 //                     summary={summaries[article.title]}
 //                     onSummarize={handleSummarize}
 //                     onBookmark={(a, n) => {
-//                       axios.post("http://https://newswiz-backend.onrender.com/save-note", {
+//                       axios.post("https://newswiz-backend.onrender.com/save-note", {
 //                         token: localStorage.getItem("authToken"),
 //                         article: a,
 //                         note: n,
@@ -171,9 +171,9 @@ const Home = () => {
     setLoading(true);
     setError('');
     try {
-      let url = `http://https://newswiz-backend.onrender.com/api/news?cat=${cat}&lang=${lang}`;
+      let url = `https://newswiz-backend.onrender.com/api/news?cat=${cat}&lang=${lang}`;
       if (categoryKeywords[cat]) {
-        url = `http://https://newswiz-backend.onrender.com/api/news?keywords=${encodeURIComponent(categoryKeywords[cat])}&lang=${lang}`;
+        url = `https://newswiz-backend.onrender.com/api/news?keywords=${encodeURIComponent(categoryKeywords[cat])}&lang=${lang}`;
       }
       const res = await axios.get(url);
       setArticles(res.data.articles);
@@ -237,7 +237,7 @@ const Home = () => {
                   summary={summaries[article.title]}
                   onSummarize={handleSummarize}
                   onBookmark={(a, n) => {
-                    axios.post("http://https://newswiz-backend.onrender.com/save-note", {
+                    axios.post("https://newswiz-backend.onrender.com/save-note", {
                       token: localStorage.getItem("authToken"),
                       article: a,
                       note: n,

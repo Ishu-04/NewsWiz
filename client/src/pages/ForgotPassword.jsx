@@ -11,7 +11,7 @@
 //   const handleReset = async (e) => {
 //     e.preventDefault();
 //     try {
-//       await axios.post('http://https://newswiz-backend.onrender.com/reset-password', { email, newPassword });
+//       await axios.post('https://newswiz-backend.onrender.com/reset-password', { email, newPassword });
 //       toast.success('Password reset successful!');
 //       setEmail('');
 //       setNewPassword('');
@@ -63,7 +63,7 @@
 //   const handleReset = async (e) => {
 //     e.preventDefault();
 //     try {
-//       const res = await axios.post('http://https://newswiz-backend.onrender.com/reset-password', {
+//       const res = await axios.post('https://newswiz-backend.onrender.com/reset-password', {
 //         email,
 //         newPassword,
 //       });
