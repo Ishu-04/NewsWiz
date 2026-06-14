@@ -124,7 +124,7 @@ export const ArticleCard = ({ article, summary, onSummarize }) => {
 
     if (isLoggedIn) {
       try {
-        await axios.post('http://localhost:5002/save-note', {
+        await axios.post('http://https://newswiz-backend.onrender.com/save-note', {
           token: localStorage.getItem("authToken"),
           article,
           note,
@@ -149,7 +149,7 @@ export const ArticleCard = ({ article, summary, onSummarize }) => {
 
     if (isLoggedIn) {
       try {
-        await axios.post("http://localhost:5002/like-article", {
+        await axios.post("http://https://newswiz-backend.onrender.com/like-article", {
           token: localStorage.getItem("authToken"),
           article,
         });

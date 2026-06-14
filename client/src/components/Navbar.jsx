@@ -16,7 +16,7 @@ const Navbar = () => {
     if (!token) return;
 
     try {
-      const res = await fetch('http://localhost:5002/user-info', {
+      const res = await fetch('http://https://newswiz-backend.onrender.com/user-info', {
         headers: { Authorization: token }
       });
       const data = await res.json();
@@ -102,7 +102,7 @@ const Navbar = () => {
                 <li><button className="dropdown-item" onClick={async () => {
                   const token = localStorage.getItem('authToken');
                   try {
-                    await fetch('http://localhost:5002/delete-account', {
+                    await fetch('http://https://newswiz-backend.onrender.com/delete-account', {
                       method: 'POST',
                       headers: { 'Content-Type': 'application/json' },
                       body: JSON.stringify({ token }),

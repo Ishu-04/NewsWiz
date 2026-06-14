@@ -18,7 +18,7 @@ const SavedNotes = () => {
 
     if (token) {
       try {
-        const res = await axios.get("http://localhost:5002/get-notes", {
+        const res = await axios.get("http://https://newswiz-backend.onrender.com/get-notes", {
           headers: { Authorization: token },
         });
         setNotes(res.data.notes || []);
@@ -38,7 +38,7 @@ const SavedNotes = () => {
 
     if (token) {
       try {
-        await axios.delete(`http://localhost:5002/delete-note/${id}`, {
+        await axios.delete(`http://https://newswiz-backend.onrender.com/delete-note/${id}`, {
           headers: { Authorization: token },
         });
         toast.success("Note deleted");

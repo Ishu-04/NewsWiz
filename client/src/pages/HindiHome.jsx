@@ -43,9 +43,9 @@ const HindiHome = () => {
     setLoading(true);
     setError('');
     try {
-      let url = `http://localhost:5002/api/news?cat=${cat}&lang=hi`;
+      let url = `http://https://newswiz-backend.onrender.com/api/news?cat=${cat}&lang=hi`;
       if (categoryKeywords[cat]) {
-        url = `http://localhost:5002/api/news?keywords=${encodeURIComponent(categoryKeywords[cat])}&lang=hi`;
+        url = `http://https://newswiz-backend.onrender.com/api/news?keywords=${encodeURIComponent(categoryKeywords[cat])}&lang=hi`;
       }
       const res = await axios.get(url);
       setArticles(res.data.articles);
@@ -111,7 +111,7 @@ const HindiHome = () => {
                     summary={summaries[article.title]}
                     onSummarize={handleSummarize}
                     onBookmark={(a, n) => {
-                      axios.post("http://localhost:5002/save-note", {
+                      axios.post("http://https://newswiz-backend.onrender.com/save-note", {
                         token: localStorage.getItem("authToken"),
                         article: a,
                         note: n,

@@ -14,7 +14,7 @@
 //   const handleSignup = async (e) => {
 //     e.preventDefault();
 //     try {
-//       const res = await axios.post('http://localhost:5002/signup', {
+//       const res = await axios.post('http://https://newswiz-backend.onrender.com/signup', {
 //         username,
 //         email,
 //         password,
@@ -116,7 +116,7 @@ const Signup = () => {
 const handleSignup = async (e) => {
   e.preventDefault();
   try {
-    const res = await axios.post('http://localhost:5002/signup', {
+    const res = await axios.post('http://https://newswiz-backend.onrender.com/signup', {
       username,
       email,
       password,
