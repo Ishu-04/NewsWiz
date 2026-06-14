@@ -59,7 +59,7 @@ const HindiHome = () => {
 
   const handleSummarize = async (article) => {
     try {
-      const res = await axios.post('http://localhost:5001/summarize', {
+      const res = await axios.post('https://newswiz-ai.onrender.com/summarize', {
         content: article.content || article.description,
         lang: 'hi',
       });

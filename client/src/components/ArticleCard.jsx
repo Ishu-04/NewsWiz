@@ -106,7 +106,7 @@ export const ArticleCard = ({ article, summary, onSummarize }) => {
 
   const handleTranslate = async () => {
     try {
-      const response = await axios.post('http://localhost:5001/translate', {
+      const response = await axios.post('https://newswiz-ai.onrender.com/translate', {
         text: summary,
         target_lang: selectedLang,
       });
